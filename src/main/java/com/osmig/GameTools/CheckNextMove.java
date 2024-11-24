@@ -31,6 +31,7 @@ public class CheckNextMove {
             setNextGrid(move);
             print("current playing grid: " + currentGrid);
             print("Previous moves: " + String.valueOf(previousMoves));
+            assignSpot(move);
             displayBoard();
 
 
@@ -38,8 +39,58 @@ public class CheckNextMove {
 
         }
 
+    private static void assignSpot(String move) {
+        switch (move) {
+            case "a0", "0a" -> {
+                board[1][1] = player;
+                changePlayer();
+            }
+            case "a1", "1a" -> {
+                board[3][1] = player;
+                changePlayer();
+            }
+            case "a2", "2a" -> {
+                board[5][1] = player;
+                changePlayer();
+            }
+            case "b0", "0b" -> {
+                board[1][3] = player;
+                changePlayer();
+            }
+            case "b1", "1b" -> {
+                board[3][3] = player;
+                changePlayer();
+            }
+            case "b2", "2b" -> {
+                board[5][3] = player;
+                changePlayer();
+            }
+            case "c0", "0c" -> {
+                board[1][5] = player;
+                changePlayer();
+            }
+            case "c1", "1c" -> {
+                board[3][5] = player;
+                changePlayer();
+            }
+            case "c2", "2c" -> {
+                board[5][5] = player;
+                changePlayer();
+            }
 
+            // second tic-tac-toe
+
+
+            // center tic-tac-toe
+            case "d3", "3d" -> {
+                board[7][7] = "  " +player;
+                changePlayer();
+            }
+        }
 
     }
+
+
+}
 
 
