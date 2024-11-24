@@ -1,0 +1,6 @@
+
+dir /S /B src\main\java\com\osmig\*.java > sources.txt
+
+javac -d out @sources.txt
+
+ java -cp out com.osmig.game_board.GameBoard
