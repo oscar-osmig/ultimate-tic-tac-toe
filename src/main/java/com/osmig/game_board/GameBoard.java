@@ -18,7 +18,7 @@ public class GameBoard {
         GRIDS.put(0, new ArrayList<>(Arrays.asList("a0", "b0", "c0", "a1", "b1", "c1", "a2", "b2", "c2")));
         GRIDS.put(1, new ArrayList<>(Arrays.asList("d0", "e0", "f0", "d1", "e1", "f1", "d2", "e2", "f2")));
         GRIDS.put(2, new ArrayList<>(Arrays.asList("g0", "h0", "i0", "g1", "h1", "i1", "g2", "h2", "i2")));
-        GRIDS.put(3, new ArrayList<>(Arrays.asList("a3", "b3", "c3", "a4", "b4", "c4", "a5", "b5", "f5")));
+        GRIDS.put(3, new ArrayList<>(Arrays.asList("a3", "b3", "c3", "a4", "b4", "c4", "a5", "b5", "c5")));
         GRIDS.put(4, new ArrayList<>(Arrays.asList("d3", "e3", "f3", "d4", "e4", "f4", "d5", "e5", "f5")));
         GRIDS.put(5, new ArrayList<>(Arrays.asList("g3", "h3", "i3", "g4", "h4", "i4", "g5", "h5", "i5")));
         GRIDS.put(6, new ArrayList<>(Arrays.asList("a6", "b6", "c6", "a7", "b7", "c7", "a8", "b8", "c8")));

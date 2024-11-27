@@ -137,6 +137,36 @@ public class CheckNextMove {
             }
 
             // grid 3
+            case "a3", "3a" -> {
+                board[7][1] = player;
+                changePlayer();
+            }case "a4", "4a" -> {
+                board[9][1] = player;
+                changePlayer();
+            }case "a5", "5a" -> {
+                board[11][1] = player;
+                changePlayer();
+            }case "b3", "3b" -> {
+                board[7][3] = player;
+                changePlayer();
+            }case "b4", "4b" -> {
+                board[9][3] = player;
+                changePlayer();
+            }case "b5", "5b" -> {
+                board[11][3] = player;
+                changePlayer();
+            }case "c3", "3c" -> {
+                board[7][5] = player;
+                changePlayer();
+            }case "c4", "4c" -> {
+                board[9][5] = player;
+                changePlayer();
+            }case "c5", "5c" -> {
+                board[11][5] = player;
+                changePlayer();
+            }
+
+
 
             // center tic-tac-toe - grid 4
             case "d3", "3d" -> {
