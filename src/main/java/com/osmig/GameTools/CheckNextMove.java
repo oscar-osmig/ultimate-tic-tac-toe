@@ -107,6 +107,34 @@ public class CheckNextMove {
             }
 
             // grid 2
+            case "g0", "0g" -> {
+                board[1][13] = "  " + player;
+                changePlayer();
+            }case "g1", "1g" -> {
+                board[3][13] = "  " + player;
+                changePlayer();
+            }case "g2", "2g" -> {
+                board[5][13] = "  " + player;
+                changePlayer();
+            }case "h0", "0h" -> {
+                board[1][15] = player;
+                changePlayer();
+            }case "h1", "1h" -> {
+                board[3][15] = player;
+                changePlayer();
+            }case "h2", "2h" -> {
+                board[5][15] = player;
+                changePlayer();
+            }case "i0", "0i" -> {
+                board[1][17] = player;
+                changePlayer();
+            }case "i1", "1i" -> {
+                board[3][17] = player;
+                changePlayer();
+            }case "i2", "2i" -> {
+                board[5][17] = player;
+                changePlayer();
+            }
 
             // grid 3
 
