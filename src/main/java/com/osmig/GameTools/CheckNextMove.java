@@ -34,12 +34,10 @@ public class CheckNextMove {
             assignSpot(move);
             displayBoard();
 
-
-
-
         }
 
     private static void assignSpot(String move) {
+            // grid 0
         switch (move) {
             case "a0", "0a" -> {
                 board[1][1] = player;
@@ -78,10 +76,41 @@ public class CheckNextMove {
                 changePlayer();
             }
 
-            // second tic-tac-toe
+            // second tic-tac-toe - grid 1
+            case "d0", "0d" -> {
+                board[1][7] =  "  " + player;
+                changePlayer();
+            }case "d1", "1d" -> {
+                board[3][7] =  "  " + player;
+                changePlayer();
+            }case "d2", "2d" -> {
+                board[5][7] =  "  " + player;
+                changePlayer();
+            }case "e0", "0e" -> {
+                board[1][9] = player;
+                changePlayer();
+            }case "e1", "1e" -> {
+                board[3][9] = player;
+                changePlayer();
+            }case "e2", "2e" -> {
+                board[5][9] = player;
+                changePlayer();
+            }case "f0", "0f" -> {
+                board[1][11] = player;
+                changePlayer();
+            }case "f1", "1f" -> {
+                board[3][11] = player;
+                changePlayer();
+            }case "f2", "2f" -> {
+                board[5][11] = player;
+                changePlayer();
+            }
 
+            // grid 2
 
-            // center tic-tac-toe
+            // grid 3
+
+            // center tic-tac-toe - grid 4
             case "d3", "3d" -> {
                 board[7][7] = "  " +player; // for the rest, close to line in big tic-tac-toe do like this
                 changePlayer();
@@ -91,8 +120,7 @@ public class CheckNextMove {
             }case "d5", "5d" -> {
                 board[11][7] = "  " +player;
                 changePlayer();
-            }
-            case "e3", "3e" -> {
+            }case "e3", "3e" -> {
                 board[7][9] = player;
                 changePlayer();
             }case "e4", "4e" -> {
@@ -111,6 +139,14 @@ public class CheckNextMove {
                 board[11][11] = player;
                 changePlayer();
             }
+
+            // grid 5
+
+            // grid 6
+
+            // grid 7
+
+            // grid 8
 
         }
 

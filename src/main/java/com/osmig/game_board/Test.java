@@ -37,10 +37,10 @@ public class Test {
             }else {
                 print("That spot has been taken " + "\nMoves: " + String.valueOf(previousMoves));
             }
-        } else if (move.equalsIgnoreCase("q")) {
+        } else if (move.equalsIgnoreCase("/q")) {
             System.exit(0);
         } else {
-            print("Please enter the a move from the starting tic tac toe");
+            print("Please enter your move in the current grid.");
             print("current playing grid: " + currentGrid);
         }
     }
@@ -63,9 +63,10 @@ public class Test {
                 makeMove(move);
                 running = false;
             } else if (move.equalsIgnoreCase("/q")) {
-                running = false;
+                System.exit(0);
             } else {
-                System.out.println("Please enter the a move from the starting tic tac toe");
+                System.out.println("Please enter your move on current grid");
+                print("Current playing grid: " + currentGrid);
             }
 
         }
