@@ -258,7 +258,6 @@ public class CheckNextMove {
                 changePlayer();
             }
 
-            // TODO: do cases grid 7
             // grid 7
             case "d6", "6d" -> {
                 board[13][7] = "  " +player;
@@ -291,6 +290,34 @@ public class CheckNextMove {
 
             // TODO: do cases grid 8
             // grid 8
+            case "g6", "6g" -> {
+                board[13][13] = "  " +player; // for the rest, close to line in big tic-tac-toe do like this
+                changePlayer();
+            }case "g7", "7g" -> {
+                board[15][13] = "  " +player;
+                changePlayer();
+            }case "g8", "8g" -> {
+                board[17][13] = "  " +player;
+                changePlayer();
+            }case "h6", "6h" -> {
+                board[13][15] = player;
+                changePlayer();
+            }case "h7", "7h" -> {
+                board[15][15] = player;
+                changePlayer();
+            }case "h8", "8h" -> {
+                board[17][15] = player;
+                changePlayer();
+            }case "i6", "6i" -> {
+                board[13][17] = player;
+                changePlayer();
+            }case "i7", "7i" -> {
+                board[15][17] = player;
+                changePlayer();
+            }case "i8", "8i" -> {
+                board[17][17] = player;
+                changePlayer();
+            }
 
         }
 
