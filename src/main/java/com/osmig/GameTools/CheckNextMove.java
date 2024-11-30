@@ -228,8 +228,35 @@ public class CheckNextMove {
                 changePlayer();
             }
 
-            // TODO: do cases grid 6
             // grid 6
+            case "a6", "6a" -> {
+                board[13][1] = player;
+                changePlayer();
+            }case "a7", "7a" -> {
+                board[15][1] = player;
+                changePlayer();
+            }case "a8", "8a" -> {
+                board[17][1] = player;
+                changePlayer();
+            }case "b6", "6b" -> {
+                board[13][3] = player;
+                changePlayer();
+            }case "b7", "7b" -> {
+                board[15][3] = player;
+                changePlayer();
+            }case "b8", "8b" -> {
+                board[17][3] = player;
+                changePlayer();
+            }case "c6", "6c" -> {
+                board[13][5] = player;
+                changePlayer();
+            }case "c7", "7c" -> {
+                board[15][5] = player;
+                changePlayer();
+            }case "c8", "8c" -> {
+                board[17][5] = player;
+                changePlayer();
+            }
 
             // TODO: do cases grid 7
             // grid 7
