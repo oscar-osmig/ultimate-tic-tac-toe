@@ -31,15 +31,299 @@ public class CheckNextMove {
             setNextGrid(move);
             print("current playing grid: " + currentGrid);
             print("Previous moves: " + String.valueOf(previousMoves));
+            assignSpot(move);
             displayBoard();
-
-
-
 
         }
 
+    private static void assignSpot(String move) {
+            // grid 0
+        switch (move) {
+            case "a0", "0a" -> {
+                board[1][1] = player;
+                changePlayer();
+            }
+            case "a1", "1a" -> {
+                board[3][1] = player;
+                changePlayer();
+            }
+            case "a2", "2a" -> {
+                board[5][1] = player;
+                changePlayer();
+            }
+            case "b0", "0b" -> {
+                board[1][3] = player;
+                changePlayer();
+            }
+            case "b1", "1b" -> {
+                board[3][3] = player;
+                changePlayer();
+            }
+            case "b2", "2b" -> {
+                board[5][3] = player;
+                changePlayer();
+            }
+            case "c0", "0c" -> {
+                board[1][5] = player;
+                changePlayer();
+            }
+            case "c1", "1c" -> {
+                board[3][5] = player;
+                changePlayer();
+            }
+            case "c2", "2c" -> {
+                board[5][5] = player;
+                changePlayer();
+            }
 
+            // second tic-tac-toe - grid 1
+            case "d0", "0d" -> {
+                board[1][7] =  "  " + player;
+                changePlayer();
+            }case "d1", "1d" -> {
+                board[3][7] =  "  " + player;
+                changePlayer();
+            }case "d2", "2d" -> {
+                board[5][7] =  "  " + player;
+                changePlayer();
+            }case "e0", "0e" -> {
+                board[1][9] = player;
+                changePlayer();
+            }case "e1", "1e" -> {
+                board[3][9] = player;
+                changePlayer();
+            }case "e2", "2e" -> {
+                board[5][9] = player;
+                changePlayer();
+            }case "f0", "0f" -> {
+                board[1][11] = player;
+                changePlayer();
+            }case "f1", "1f" -> {
+                board[3][11] = player;
+                changePlayer();
+            }case "f2", "2f" -> {
+                board[5][11] = player;
+                changePlayer();
+            }
+
+            // grid 2
+            case "g0", "0g" -> {
+                board[1][13] = "  " + player;
+                changePlayer();
+            }case "g1", "1g" -> {
+                board[3][13] = "  " + player;
+                changePlayer();
+            }case "g2", "2g" -> {
+                board[5][13] = "  " + player;
+                changePlayer();
+            }case "h0", "0h" -> {
+                board[1][15] = player;
+                changePlayer();
+            }case "h1", "1h" -> {
+                board[3][15] = player;
+                changePlayer();
+            }case "h2", "2h" -> {
+                board[5][15] = player;
+                changePlayer();
+            }case "i0", "0i" -> {
+                board[1][17] = player;
+                changePlayer();
+            }case "i1", "1i" -> {
+                board[3][17] = player;
+                changePlayer();
+            }case "i2", "2i" -> {
+                board[5][17] = player;
+                changePlayer();
+            }
+
+            // grid 3
+            case "a3", "3a" -> {
+                board[7][1] = player;
+                changePlayer();
+            }case "a4", "4a" -> {
+                board[9][1] = player;
+                changePlayer();
+            }case "a5", "5a" -> {
+                board[11][1] = player;
+                changePlayer();
+            }case "b3", "3b" -> {
+                board[7][3] = player;
+                changePlayer();
+            }case "b4", "4b" -> {
+                board[9][3] = player;
+                changePlayer();
+            }case "b5", "5b" -> {
+                board[11][3] = player;
+                changePlayer();
+            }case "c3", "3c" -> {
+                board[7][5] = player;
+                changePlayer();
+            }case "c4", "4c" -> {
+                board[9][5] = player;
+                changePlayer();
+            }case "c5", "5c" -> {
+                board[11][5] = player;
+                changePlayer();
+            }
+
+
+
+            // center tic-tac-toe - grid 4
+            case "d3", "3d" -> {
+                board[7][7] = "  " +player; // for the rest, close to line in big tic-tac-toe do like this
+                changePlayer();
+            }case "d4", "4d" -> {
+                board[9][7] = "  " +player;
+                changePlayer();
+            }case "d5", "5d" -> {
+                board[11][7] = "  " +player;
+                changePlayer();
+            }case "e3", "3e" -> {
+                board[7][9] = player;
+                changePlayer();
+            }case "e4", "4e" -> {
+                board[9][9] = player;
+                changePlayer();
+            }case "e5", "5e" -> {
+                board[11][9] = player;
+                changePlayer();
+            }case "f3", "3f" -> {
+                board[7][11] = player;
+                changePlayer();
+            }case "f4", "4f" -> {
+                board[9][11] = player;
+                changePlayer();
+            }case "f5", "5f" -> {
+                board[11][11] = player;
+                changePlayer();
+            }
+
+            // grid 5
+            case "g3", "3g" -> {
+                board[7][13] = "  " +player; // for the rest, close to line in big tic-tac-toe do like this
+                changePlayer();
+            }case "g4", "4g" -> {
+                board[9][13] = "  " +player;
+                changePlayer();
+            }case "g5", "5g" -> {
+                board[11][13] = "  " +player;
+                changePlayer();
+            }case "h3", "3h" -> {
+                board[7][15] = player;
+                changePlayer();
+            }case "h4", "4h" -> {
+                board[9][15] = player;
+                changePlayer();
+            }case "h5", "5h" -> {
+                board[11][15] = player;
+                changePlayer();
+            }case "i3", "3i" -> {
+                board[7][17] = player;
+                changePlayer();
+            }case "i4", "4i" -> {
+                board[9][17] = player;
+                changePlayer();
+            }case "i5", "5i" -> {
+                board[11][17] = player;
+                changePlayer();
+            }
+
+            // grid 6
+            case "a6", "6a" -> {
+                board[13][1] = player;
+                changePlayer();
+            }case "a7", "7a" -> {
+                board[15][1] = player;
+                changePlayer();
+            }case "a8", "8a" -> {
+                board[17][1] = player;
+                changePlayer();
+            }case "b6", "6b" -> {
+                board[13][3] = player;
+                changePlayer();
+            }case "b7", "7b" -> {
+                board[15][3] = player;
+                changePlayer();
+            }case "b8", "8b" -> {
+                board[17][3] = player;
+                changePlayer();
+            }case "c6", "6c" -> {
+                board[13][5] = player;
+                changePlayer();
+            }case "c7", "7c" -> {
+                board[15][5] = player;
+                changePlayer();
+            }case "c8", "8c" -> {
+                board[17][5] = player;
+                changePlayer();
+            }
+
+            // grid 7
+            case "d6", "6d" -> {
+                board[13][7] = "  " +player;
+                changePlayer();
+            }case "d7", "7d" -> {
+                board[15][7] = "  " +player;
+                changePlayer();
+            }case "d8", "8d" -> {
+                board[17][7] = "  " +player;
+                changePlayer();
+            }case "e6", "6e" -> {
+                board[13][9] = player;
+                changePlayer();
+            }case "e7", "7e" -> {
+                board[15][9] = player;
+                changePlayer();
+            }case "e8", "8e" -> {
+                board[17][9] = player;
+                changePlayer();
+            }case "f6", "6f" -> {
+                board[13][11] = player;
+                changePlayer();
+            }case "f7", "7f" -> {
+                board[15][11] = player;
+                changePlayer();
+            }case "f8", "8f" -> {
+                board[17][11] = player;
+                changePlayer();
+            }
+
+            // TODO: do cases grid 8
+            // grid 8
+            case "g6", "6g" -> {
+                board[13][13] = "  " +player; // for the rest, close to line in big tic-tac-toe do like this
+                changePlayer();
+            }case "g7", "7g" -> {
+                board[15][13] = "  " +player;
+                changePlayer();
+            }case "g8", "8g" -> {
+                board[17][13] = "  " +player;
+                changePlayer();
+            }case "h6", "6h" -> {
+                board[13][15] = player;
+                changePlayer();
+            }case "h7", "7h" -> {
+                board[15][15] = player;
+                changePlayer();
+            }case "h8", "8h" -> {
+                board[17][15] = player;
+                changePlayer();
+            }case "i6", "6i" -> {
+                board[13][17] = player;
+                changePlayer();
+            }case "i7", "7i" -> {
+                board[15][17] = player;
+                changePlayer();
+            }case "i8", "8i" -> {
+                board[17][17] = player;
+                changePlayer();
+            }
+
+        }
 
     }
+
+
+}
 
 

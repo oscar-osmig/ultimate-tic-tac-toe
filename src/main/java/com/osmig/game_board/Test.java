@@ -11,27 +11,14 @@ public class Test {
 
     public static void main(String[] args) {
         initializeGrid();
-        initializeQuadrants();
+        //initializeQuadrants();
         startGame();
     }
 
     public static void startGame(){
         askForInitialMove();
         while (moveCounter < 80){
-            print("");
-            String move = getAnswer(player + " move >> ");
-            if (GRIDS.get(currentGrid).contains(move.trim())){
-                if (!previousMoves.contains(move.trim())){
-                    makeMove(move);
-                }else {
-                    print("That spot has been taken " + "\nMoves: " + String.valueOf(previousMoves));
-                }
-            } else if (move.equalsIgnoreCase("q")) {
-                System.exit(0);
-            } else {
-                print("Please enter the a move from the starting tic tac toe");
-                print("current playing grid: " + currentGrid);
-            }
+            askMove();
         }
 
     }
@@ -40,6 +27,24 @@ public class Test {
         System.out.print(q);
         return scanner.nextLine();
     }
+
+    public static void askMove(){
+        print("");
+        String move = getAnswer(player + " move >> ");
+        if (GRIDS.get(currentGrid).contains(move.trim())){
+            if (!previousMoves.contains(move.trim())){
+                makeMove(move);
+            }else {
+                print("That spot has been taken " + "\nMoves: " + String.valueOf(previousMoves));
+            }
+        } else if (move.equalsIgnoreCase("/q")) {
+            System.exit(0);
+        } else {
+            print("Please enter your move in the current grid.");
+            print("current playing grid: " + currentGrid);
+        }
+    }
+
 
     public static void askForInitialMove(){
         boolean running = true;
@@ -57,10 +62,11 @@ public class Test {
             if (GRIDS.get(currentGrid).contains(move.trim()) && !previousMoves.contains(move.trim())){
                 makeMove(move);
                 running = false;
-            } else if (move.equalsIgnoreCase("q")) {
-                running = false;
+            } else if (move.equalsIgnoreCase("/q")) {
+                System.exit(0);
             } else {
-                System.out.println("Please enter the a move from the starting tic tac toe");
+                System.out.println("Please enter your move on current grid");
+                print("Current playing grid: " + currentGrid);
             }
 
         }
